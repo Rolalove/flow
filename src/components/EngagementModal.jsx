@@ -37,7 +37,7 @@ const EngagementModal = ({ isOpen, onClose, data }) => {
           {/* Main content */}
           <div className="p-4">
             <div className="bg-[#EAEDFE] rounded-xl p-2 mb-4">
-              <div className="flex items-center justify-between ">
+              <div className="flex flex-col gap-y-2 md:flex-row md:items-center md:justify-between md:gap-x-0">
                 <p className="text-[#6F6CBB] text-sm ">{data.suggestion}</p>
                 <div className="flex gap-2">
                   <button className="p-2 hover:bg-gray-200 rounded">
@@ -67,16 +67,16 @@ const EngagementModal = ({ isOpen, onClose, data }) => {
                 ))}
               </ul>
               {/* Metrics */}
-            <div className="flex gap-4 ">
-              <div className="w-[25%] p-3 border rounded-lg text-center">
+            <div className="flex flex-col md:flex-row gap-4 ">
+              <div className="w-full md:w-[25%] p-3  border rounded-lg text-center">
                 <div className="text-sm text-gray-600">Decision maker</div>
                 <div className="font-semibold text-[#6F6CBB]">{data.metrics.decisionMaker}</div>
               </div>
-              <div className="w-[25%] p-3 border rounded-lg text-center">
+              <div className="w-full md:w-[25%] p-3 border rounded-lg text-center">
                 <div className="text-sm text-gray-600">Potential deal value</div>
                 <div className="font-semibold text-[#6F6CBB]">{data.metrics.dealValue}</div>
               </div>
-              <div className="w-[25%] p-3 border rounded-lg text-center">
+              <div className="w-full md:w-[25%] p-3 border rounded-lg text-center">
                 <div className="text-sm text-gray-600">Intent</div>
                 <div className="font-semibold text-[#6F6CBB]">{data.metrics.intent}</div>
               </div>
@@ -86,7 +86,7 @@ const EngagementModal = ({ isOpen, onClose, data }) => {
             
 
              {/* Footer */}
-             <div className="flex items-center justify-between text-sm text-gray-500">
+             <div className="hidden md:flex items-center justify-between text-sm text-gray-500">
               <div className="flex items-center gap-2">
                 <span className='border p-1 rounded'>D365 Sales</span>
                 <span className="text-gray-400 border p-1 rounded">+2</span>
